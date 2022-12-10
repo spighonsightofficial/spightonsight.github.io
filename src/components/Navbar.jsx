@@ -13,7 +13,7 @@ const Navbar = () => {
             justify='space-evenly' 
             fontSize='20px' 
             fontWeight='hairline'>
-        <Link href='$'>Gallery</Link>
+        <Link href='gallery'>Gallery</Link>
         <Link href='$'>Services</Link>
         <Link href='$'>Pricing</Link>
         <Link href='$'>Contact Me</Link>
