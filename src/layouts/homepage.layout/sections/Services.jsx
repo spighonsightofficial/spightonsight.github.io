@@ -1,9 +1,13 @@
 import React from 'react';
+import { FaCheck } from 'react-icons/Fa';
 import {
   Box,
   Flex,
   Heading,
   Text,
+  List,
+  ListItem,
+  ListIcon,
 } from '@chakra-ui/react';
 
 const Services = () => {
@@ -22,24 +26,57 @@ const Services = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </Text>
       </Flex>
-      <Flex w='full' py='80px' justify='space-evenly' align='center'>
-        <Box align='center'>
+      <Flex w='full' py='80px' justify='space-around' align='center'>
+        <Box textAlign='left'>
           <Heading as='h3' fontSize='48px' color='whiteAlpha.900' py='16px'>Producing</Heading>
-          <Text fontSize='18px' color='whiteAlpha.700' noOfLines={4} w='90%'>
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </Text>
+          <List pt='16px' textAlign='left' spacing='24px' fontSize='18px' color='whiteAlpha.700'>
+            <ListItem>
+              <ListIcon as={FaCheck} color={'yellow.400'}/>
+              Voice Overs
+            </ListItem>
+            <ListItem>
+              <ListIcon as={FaCheck} color={'yellow.400'}/>
+              Creating robust demos
+            </ListItem>
+            <ListItem>
+              <ListIcon as={FaCheck} color={'yellow.400'}/>
+              Crafting full productions
+            </ListItem>
+          </List>
         </Box> 
-        <Box align='center'>
+        <Box textAlign='left'>
           <Heading as='h3' fontSize='48px' color='whiteAlpha.900' py='16px'>Mixing</Heading>
-          <Text fontSize='18px' color='whiteAlpha.700' noOfLines={4} w='90%'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </Text>
+          <List pt='16px' spacing='24px' fontSize='18px' color='whiteAlpha.700'>
+            <ListItem>
+              <ListIcon as={FaCheck} color={'yellow.400'}/>
+              Voice Overs
+            </ListItem>
+            <ListItem>
+              <ListIcon as={FaCheck} color={'yellow.400'}/>
+              Creating robust demos
+            </ListItem>
+            <ListItem>
+              <ListIcon as={FaCheck} color={'yellow.400'}/>
+              Crafting full productions
+            </ListItem>
+          </List>
         </Box>
-        <Box align='center'>
+        <Box textAlign='left'>
           <Heading as='h3' fontSize='48px' color='whiteAlpha.900' py='16px'>Tracking</Heading>
-          <Text fontSize='18px' color='whiteAlpha.700' noOfLines={4} w='90%'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </Text>
+          <List pt='16px' spacing='24px' fontSize='18px' color='whiteAlpha.700'>
+            <ListItem>
+              <ListIcon as={FaCheck} color={'yellow.400'}/>
+              Voice Overs
+            </ListItem>
+            <ListItem>
+              <ListIcon as={FaCheck} color={'yellow.400'}/>
+              Creating robust demos
+            </ListItem>
+            <ListItem>
+              <ListIcon as={FaCheck} color={'yellow.400'}/>
+              Crafting full productions
+            </ListItem>
+          </List>
         </Box>
       </Flex>
     </Flex>
