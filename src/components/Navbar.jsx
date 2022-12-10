@@ -7,7 +7,7 @@ import {
 
 const Navbar = () => {
   return (
-    <Flex bg='black' justify='center' py='24px'>
+    <Flex as='nav' bg='black' justify='center' py='24px'>
       <Flex w='50%' 
             color='whiteAlpha.900' 
             justify='space-evenly' 

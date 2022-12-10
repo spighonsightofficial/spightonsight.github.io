@@ -27,7 +27,7 @@ const Hero = () => {
             </Text>
           </Heading>
         </Box>
-        <Flex mt='32px' w='30%' justify='space-between' color='whiteAlpha.600'>
+        <Flex mt='64px' w='30%' justify='space-between' color='whiteAlpha.600'>
           <FaSoundcloud fontSize={iconSize}/>
           <FaTwitter fontSize={iconSize}/>
           <FaInstagram fontSize={iconSize}/>
