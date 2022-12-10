@@ -10,10 +10,10 @@ import {
 
 const Gallery = () => {
   return (
-    <Flex id='gallery' as='section' p='64px' bg='black' justify='space-between'>
+    <Flex id='gallery' as='section' px='64px' py='128px' bg='black' justify='space-between'>
       <Flex direction='column' w='50%'>
         <Heading fontSize='64px' as='h2' color='whiteAlpha.900'>My Work.</Heading>
-        <Box border='1px'>
+        <Box>
           <Text color='whiteAlpha.700' py='32px' noOfLines={5} fontSize='24px'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </Text>
