@@ -5,14 +5,13 @@ import {
   FaInstagram,
   FaLinkedin,
   FaSoundcloud, 
-  FaTwitter,
+  FaSpotify, 
 } from 'react-icons/fa';
 
 import {
   Box,
-  Container,
   Link,
-  Stack,
+  Flex,
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
@@ -22,50 +21,57 @@ export default function SmallCentered() {
     <Box  as='footer'
           bg={useColorModeValue('black', 'gray.900')}
           color={useColorModeValue('whiteAlpha.900', 'gray.200')}
+          pt='64px'
     > 
-      <Container
-        as={Stack}
-        maxW={'6xl'}
-        py={4}
-        spacing={4}
-        justify={'center'}
-        align={'center'}>
-        <Stack direction={'row'} spacing={6} border='1px'>
-          <Link href={'#'}>Home</Link>
-          <Link href={'#'}>About</Link>
-          <Link href={'#'}>Blog</Link>
-          <Link href={'#'}>Contact</Link>
-        </Stack>
-      </Container>
+      <Flex
+        px='64px'
+        py='16px'
+        justify='start'
+        align='center'>
+        <Flex w='300px' justify='space-between' fontWeight='thin'>
+          <Link href='#'>Works</Link>
+          <Link href='#'>Services</Link>
+          <Link href='#'>Pricing</Link>
+          <Link href='#'>Contact</Link>
+          <Link href='#'>FAQs</Link>
+        </Flex>
+      </Flex>
 
       <Box
         borderTopWidth={1}
-        borderStyle={'solid'}
-        borderColor={useColorModeValue('gray.200', 'gray.700')}>
-        <Container
-          as={Stack}
-          maxW={'6xl'}
-          py={4}
-          direction={{ base: 'column', md: 'row' }}
+        borderStyle='inset'
+        borderColor={useColorModeValue('blackAlpha.900', 'gray.700')}>
+        <Flex
+          px='64px'
+          py='16px'
+          direction={{ base: 'row', md: 'row' }}
           spacing={4}
-          justify={{ base: 'center', md: 'space-between' }}
-          align={{ base: 'center', md: 'center' }}>
-          <Text>© 2022 Spight Sounds. All rights reserved.</Text>
-          <Stack direction={'row'} spacing={6}>
-            <SocialButton label={'Soundcloud'} href={'#'}>
-              <FaSoundcloud />
+          justify='space-between'
+          align='center'>
+          <Text fontWeight='semibold'>© 2022 Spight Sounds. All rights reserved.</Text>
+          <Flex w='200px' justify='space-evenly'>
+            <SocialButton label='Soundcloud' href='#'>
+              <Text fontSize='24px'>
+               <FaSoundcloud color='black' />
+              </Text>
             </SocialButton>
-            <SocialButton label={'Twitter'} href={'#'}>
-              <FaTwitter />
+            <SocialButton label='Twitter' href='#'>
+              <Text fontSize='24px'>
+               <FaSpotify color='black' />
+              </Text>
             </SocialButton>
-            <SocialButton label={'Instagram'} href={'#'}>
-              <FaInstagram />
+            <SocialButton label='Instagram' href='#'>
+              <Text fontSize='24px'>
+               <FaLinkedin color='black' />
+              </Text>
             </SocialButton>
-            <SocialButton label={'Linkedin'} href={'#'}>
-              <FaLinkedin />
+            <SocialButton label='Linkedin' href='#'>
+              <Text fontSize='24px'>
+               <FaInstagram color='black' />
+              </Text>
             </SocialButton>
-          </Stack>
-        </Container>
+          </Flex>
+        </Flex>
       </Box>
     </Box>
   );
