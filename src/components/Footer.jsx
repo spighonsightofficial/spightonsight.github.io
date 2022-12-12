@@ -49,7 +49,7 @@ export default function SmallCentered() {
           justify='space-between'
           align='center'>
           <Text fontWeight='semibold'>© 2022 Spight Sounds. All rights reserved.</Text>
-          <Flex w='200px' justify='space-evenly'>
+          <Flex w='216px' justify='space-between'>
             <SocialButton label='Soundcloud' href='#'>
               <Text fontSize='24px'>
                <FaSoundcloud color='black' />
