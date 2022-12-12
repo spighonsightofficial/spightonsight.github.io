@@ -5,6 +5,7 @@ import Gallery from './sections/Gallery';
 import Services from './sections/Services';
 import Pricing from './sections/Pricing';
 import Contact from './sections/Contact';
+import FAQ from './sections/FAQ';
 import Footer from '../../components/Footer';
 
 const HomepageLayout = () => {
@@ -16,6 +17,7 @@ const HomepageLayout = () => {
       <Services />
       <Pricing />
       <Contact />
+      <FAQ />
       <Footer />
     </>
   );
