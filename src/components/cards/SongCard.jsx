@@ -1,34 +1,73 @@
 import React from 'react';
 import { FaPlayCircle } from 'react-icons/fa';
-import { GiSoundWaves } from 'react-icons/gi';
+import Picture1 from '../../album-1.jpg';
 import {
   Box,
   Flex,
   Heading,
   Text,
+  Center,
+  useColorModeValue,
+  Image,
 } from '@chakra-ui/react';
 
 const SongCard = () => {
+  console.log(Picture1);
+  console.log(typeof Picture1);
   return (
-    <Flex as='article' 
-          bgColor='white' 
-          rounded='2xl' 
-          direction='column'
-          align='center'
-          justify='space-between'
-          boxShadow='2xl'
-          >
-      <GiSoundWaves color='black' fontSize='108px' />
-      <Flex justify='space-evenly' 
-            border='1px' 
-            bg='gray.100' 
-            w='full' 
-            roundedBottomRight='2xl' 
-            roundedBottomLeft='2xl'>
-          <FaPlayCircle fontSize='32px' />
-          <Text fontSize='18px' pl='16px'>sit amet justo</Text>
-      </Flex>
-    </Flex>
+    <Center py={12}>
+      <Box
+        role={'group'}
+        p={6}
+        maxW={'330px'}
+        w={'full'}
+        bg={useColorModeValue('white', 'gray.800')}
+        boxShadow={'2xl'}
+        rounded={'lg'}
+        pos={'relative'}
+        zIndex={1}>
+        <Box
+          rounded={'lg'}
+          mt={-12}
+          pos={'relative'}
+          height={'230px'}
+          _after={{
+            transition: 'all .3s ease',
+            content: '""',
+            w: 'full',
+            h: 'full',
+            pos: 'absolute',
+            top: 5,
+            left: 0,
+            backgroundImage: `url(${Picture1})`,
+            filter: 'blur(15px)',
+            zIndex: -1,
+          }}
+          _groupHover={{
+            _after: {
+              filter: 'blur(20px)',
+            },
+            
+          }}>
+          <Image
+            rounded={'lg'}
+            height={230}
+            width={282}
+            objectFit={'cover'}
+            src={Picture1}
+          />
+        </Box>
+        <Flex direction='column' pt='32px'>
+          <Text fontSize='20px' fontWeight='hairline' pt='8px'>Sample.</Text>
+          <Flex pt='8px' justify='start' align='center'>
+            <Text color='yellow.400'>
+              <FaPlayCircle fontSize='48px' />
+            </Text>
+            <Text fontSize='24px' pl='16px'>Lorem, ipsum.</Text>
+          </Flex>
+        </Flex>
+      </Box>
+    </Center>
   );
 }
 
