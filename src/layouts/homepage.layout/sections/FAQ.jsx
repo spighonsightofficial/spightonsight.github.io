@@ -9,7 +9,8 @@ import {
 
 const FAQ = () => {
   return (
-    <Flex as='section' 
+    <Flex as='section'
+          id='faq' 
           py='128px'
           px='64px' 
           justify='space-between' 

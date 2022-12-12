@@ -18,7 +18,7 @@ import {
 
 const Pricing = () => {
   return (
-    <Flex as='section' direction='column' py='128px' align='center'>
+    <Flex id='pricing' as='section' direction='column' py='128px' align='center'>
       <Heading as='h2' fontSize='48px'>
         Never Overpay Again.
       </Heading>

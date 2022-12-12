@@ -12,7 +12,7 @@ import {
 
 const Services = () => {
   return (
-    <Flex id='section'
+    <Flex id='services'
           as='section' 
           bg='black' 
           px='64px' 

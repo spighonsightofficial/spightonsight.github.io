@@ -16,7 +16,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 
-export default function SmallCentered() {
+const Footer = () => {
   return (
     <Box  as='footer'
           bg={useColorModeValue('black', 'gray.900')}
@@ -29,11 +29,11 @@ export default function SmallCentered() {
         justify='start'
         align='center'>
         <Flex w='300px' justify='space-between' fontWeight='thin'>
-          <Link href='#'>Works</Link>
-          <Link href='#'>Services</Link>
-          <Link href='#'>Pricing</Link>
-          <Link href='#'>Contact</Link>
-          <Link href='#'>FAQs</Link>
+          <Link href='#gallery'>Works</Link>
+          <Link href='#services'>Services</Link>
+          <Link href='#pricing'>Pricing</Link>
+          <Link href='#contact'>Contact</Link>
+          <Link href='#faq'>FAQs</Link>
         </Flex>
       </Flex>
 
@@ -76,3 +76,5 @@ export default function SmallCentered() {
     </Box>
   );
 }
+
+export default Footer;
