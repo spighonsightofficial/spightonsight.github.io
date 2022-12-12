@@ -8,11 +8,15 @@ const PriceCard = ({ children }) => {
   return (
     <Box
       mb={4}
-      shadow='base'
+      shadow='inner'
       borderWidth='1px'
       alignSelf={{ base: 'center', lg: 'flex-start' }}
       borderColor={useColorModeValue('gray.200', 'gray.500')}
-      borderRadius={'xl'}>
+      borderRadius='xl'
+      transition={'box-shadow 1s ease-in-out s'}
+      _hover={{
+        shadow: '2xl',
+      }}>
       {children}
     </Box>
   );

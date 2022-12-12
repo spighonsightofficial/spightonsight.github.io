@@ -1,8 +1,9 @@
 import React from 'react';
 import PriceCard from '../../../components/cards/PriceCard';
-import { FaCheckCircle } from 'react-icons/fa';
+import { FaMixer } from 'react-icons/fa';
 import {
   Box,
+  Flex,
   Stack,
   HStack,
   Heading,
@@ -17,178 +18,183 @@ import {
 
 const Pricing = () => {
   return (
-    <Box py={12}>
-      <VStack spacing={2} textAlign="center">
-        <Heading as="h1" fontSize="4xl">
-          Plans that fit your need
-        </Heading>
-        <Text fontSize="lg" color={'gray.500'}>
-          Start with 14-day free trial. No credit card needed. Cancel at
-          anytime.
-        </Text>
-      </VStack>
-      <Stack
-        direction={{ base: 'column', md: 'row' }}
-        textAlign="center"
-        justify="center"
-        spacing={{ base: 4, lg: 10 }}
-        py={10}>
+    <Flex as='section' direction='column' py='128px' align='center'>
+      <Heading as='h2' fontSize='48px'>
+        Never Overpay Again.
+      </Heading>
+      <Text color='blackAlpha.700' fontSize='24px' py='16px'>
+        Below are the base prices for hourly work. Contact me for package pricing.
+      </Text>
+      <Flex
+        w='75%'
+        justify='space-evenly'
+        align='cent'er
+        py='64px'>
         <PriceCard>
-          <Box py={4} px={12}>
-            <Text fontWeight="500" fontSize="2xl">
-              Hobby
+          <Flex direction='column' align='center' py='32px' px='4px'>
+            <Text fontSize='28px' fontWeight='semibold' py='8px'>
+              Producing
             </Text>
-            <HStack justifyContent="center">
-              <Text fontSize="3xl" fontWeight="600">
+            <Flex justify='space-around' align='center'>
+              <Text fontSize='40px' fontWeight='semibold'>
                 $
               </Text>
-              <Text fontSize="5xl" fontWeight="900">
-                79
+              <Text fontSize='84px' fontWeight='bold' px='8px'>
+                25
               </Text>
-              <Text fontSize="3xl" color="gray.500">
-                /month
+              <Text fontSize='28px' color='blackAlpha.600'>
+                /hour
               </Text>
-            </HStack>
-          </Box>
-          <VStack
+            </Flex>
+          </Flex>
+          <Flex
+            direction='column'
+            justify='space-between'
+            align='center'
             bg={useColorModeValue('gray.50', 'gray.700')}
-            py={4}
-            borderBottomRadius={'xl'}>
-            <List spacing={3} textAlign="start" px={12}>
+            py='24px'
+            borderBottomRadius='xl'>
+            <List spacing={3} textAlign='start' px='32px'>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
+                <ListIcon as={FaMixer} color='purple.600' />
                 unlimited build minutes
               </ListItem>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
+                <ListIcon as={FaMixer} color='purple.600'/>
                 Lorem, ipsum dolor.
               </ListItem>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
+                <ListIcon as={FaMixer} color='purple.600' />
                 5TB Lorem, ipsum dolor.
               </ListItem>
             </List>
-            <Box w="80%" pt={7}>
-              <Button w="full" colorScheme="red" variant="outline">
-                Start trial
+            <Box w='80%' pt='32px'>
+              <Button w='full' colorScheme='purple' variant='outline'>
+                Book Now
               </Button>
             </Box>
-          </VStack>
+          </Flex>
         </PriceCard>
 
         <PriceCard>
-          <Box position="relative">
+          <Box position='relative'>
             <Box
-              position="absolute"
-              top="-16px"
-              left="50%"
+              position='absolute'
+              top='-16px'
+              left='50%'
               style={{ transform: 'translate(-50%)' }}>
               <Text
-                textTransform="uppercase"
-                bg={useColorModeValue('red.300', 'red.700')}
-                px={3}
-                py={1}
-                color={useColorModeValue('gray.900', 'gray.300')}
-                fontSize="sm"
-                fontWeight="600"
-                rounded="xl">
+                textTransform='uppercase'
+                bg={useColorModeValue('yellow.300', 'red.700')}
+                px='8px'
+                py='4px'
+                color={useColorModeValue('blackAlpha.900', 'gray.300')}
+                fontSize='16px'
+                fontWeight='semibold'
+                rounded='full'>
                 Most Popular
               </Text>
             </Box>
-            <Box py={4} px={12}>
-              <Text fontWeight="500" fontSize="2xl">
-                Growth
+            <Flex direction='column' align='center' py='32px' px='4px'>
+              <Text  fontSize='32px' fontWeight='bold' py='8px'>
+                Mixing
               </Text>
-              <HStack justifyContent="center">
-                <Text fontSize="3xl" fontWeight="600">
+              <Flex justify='space-around' align='center'>
+                <Text fontSize='44px' fontWeight='semibold'>
                   $
                 </Text>
-                <Text fontSize="5xl" fontWeight="900">
-                  149
+                <Text fontSize='88px' fontWeight='bold' px='8px'>
+                  35
                 </Text>
-                <Text fontSize="3xl" color="gray.500">
-                  /month
+                <Text fontSize='32px' color='blackAlpha.600'>
+                  /hour
                 </Text>
-              </HStack>
-            </Box>
-            <VStack
+              </Flex>
+            </Flex>
+            <Flex
+              direction='column'
+              justify='space-between' 
+              align='center'
               bg={useColorModeValue('gray.50', 'gray.700')}
-              py={4}
+              py='32px'
               borderBottomRadius={'xl'}>
-              <List spacing={3} textAlign="start" px={12}>
+              <List spacing={3} textAlign='start' px='64px'>
                 <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  <ListIcon as={FaMixer} color='purple.600' />
                   unlimited build minutes
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  <ListIcon as={FaMixer} color='purple.600' />
                   Lorem, ipsum dolor.
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  <ListIcon as={FaMixer} color='purple.600' />
                   5TB Lorem, ipsum dolor.
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  <ListIcon as={FaMixer} color='purple.600' />
                   5TB Lorem, ipsum dolor.
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  <ListIcon as={FaMixer} color='purple.600' />
                   5TB Lorem, ipsum dolor.
                 </ListItem>
               </List>
-              <Box w="80%" pt={7}>
-                <Button w="full" colorScheme="red">
-                  Start trial
+              <Box w='80%' pt='32px'>
+                <Button w='full' colorScheme='purple' variant='solid'>
+                  Book Now
                 </Button>
               </Box>
-            </VStack>
+            </Flex>
           </Box>
         </PriceCard>
         <PriceCard>
-          <Box py={4} px={12}>
-            <Text fontWeight="500" fontSize="2xl">
-              Scale
+          <Flex direction='column' align='center' py='32px' px='4px'>
+            <Text fontSize='28px' fontWeight='semibold' py='8px'>
+              Tracking
             </Text>
-            <HStack justifyContent="center">
-              <Text fontSize="3xl" fontWeight="600">
+            <Flex justify='space-around' align='center'>
+              <Text fontSize='40px' fontWeight='semibold'>
                 $
               </Text>
-              <Text fontSize="5xl" fontWeight="900">
-                349
+              <Text fontSize='84px' fontWeight='bold' px='8px'>
+                25
               </Text>
-              <Text fontSize="3xl" color="gray.500">
-                /month
+              <Text fontSize='28px' color='blackAlpha.600'>
+                /hour
               </Text>
-            </HStack>
-          </Box>
-          <VStack
+            </Flex>
+          </Flex>
+          <Flex
+            direction='column'
+            justify='space-between'
+            align='center'
             bg={useColorModeValue('gray.50', 'gray.700')}
-            py={4}
-            borderBottomRadius={'xl'}>
-            <List spacing={3} textAlign="start" px={12}>
+            py='24px'
+            borderBottomRadius='xl'>
+            <List spacing={3} textAlign='start' px='32px'>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
+                <ListIcon as={FaMixer} color='purple.600' />
                 unlimited build minutes
               </ListItem>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
+                <ListIcon as={FaMixer} color='purple.600' />
                 Lorem, ipsum dolor.
               </ListItem>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
+                <ListIcon as={FaMixer} color='purple.600' />
                 5TB Lorem, ipsum dolor.
               </ListItem>
             </List>
-            <Box w="80%" pt={7}>
-              <Button w="full" colorScheme="red" variant="outline">
-                Start trial
+            <Box w='80%' pt='32px'>
+              <Button w='full' colorScheme='purple' variant='outline'>
+                Book Now
               </Button>
             </Box>
-          </VStack>
+          </Flex>
         </PriceCard>
-      </Stack>
-    </Box>
+      </Flex>
+    </Flex>
   );
 }
 
