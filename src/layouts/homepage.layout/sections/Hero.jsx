@@ -18,7 +18,7 @@ import {
 const Hero = () => {
   const iconSize = '58px';
   return (
-    <Box as='section' p='64px' bg='black'>
+    <Box as='section' px='64px' py='128px' bg='black'>
       <Flex direction="column">
         <Box w='80%'>
           <Heading as='h1' fontSize='64px'>
