@@ -1,9 +1,12 @@
 import React from 'react';
+import FreezeShakeAnimatedBox from '../../../components/boxes/animated-boxes/FreezeShakeAnimatedBox';
+
 import { 
   FaInstagram,
   FaLinkedin,
   FaSoundcloud, 
-  FaTwitter,
+  FaSpotify,
+  FaFacebook,
 } from 'react-icons/fa';
 
 import {
@@ -11,12 +14,13 @@ import {
   Flex,
   Heading,
   Text,
+  Button,
 } from '@chakra-ui/react';
 
 //TODO: Add Highlights to hero text
-// Social Links: Twitter, LinkedIn, Instagram, SoundCloud
 const Hero = () => {
   const iconSize = '58px';
+
   return (
     <Box id='hero' as='section' px='64px' py='128px' bg='black'>
       <Flex direction="column">
@@ -28,10 +32,44 @@ const Hero = () => {
           </Heading>
         </Box>
         <Flex mt='64px' w='30%' justify='space-between' color='whiteAlpha.600'>
-          <FaSoundcloud fontSize={iconSize}/>
-          <FaTwitter fontSize={iconSize}/>
-          <FaInstagram fontSize={iconSize}/>
-          <FaLinkedin fontSize={iconSize}/>
+          <a  href="https://www.soundcloud.com" 
+              aria-label='Soundcloud profile link' 
+              target='_blank'>
+              <FreezeShakeAnimatedBox>
+                <FaSoundcloud fontSize={iconSize}/>
+              </FreezeShakeAnimatedBox>
+          </a>
+          <a  href="https://www.spotify.com" 
+              aria-label='Spotify profile link' 
+              target='_blank'
+              >
+              <FreezeShakeAnimatedBox>
+                <FaSpotify fontSize={iconSize}/>
+              </FreezeShakeAnimatedBox>
+          </a>
+          <a  href="https://www.facebook.com" 
+              aria-label='Facebook profile link' 
+              target='_blank'
+              >
+              <FreezeShakeAnimatedBox>
+                <FaFacebook fontSize={iconSize}/>
+              </FreezeShakeAnimatedBox>
+          </a>
+          <a  href="https://www.linkedin.com" 
+              aria-label='Linkedin profile link' 
+              target='_blank'
+              >
+              <FreezeShakeAnimatedBox>
+                <FaLinkedin fontSize={iconSize}/> 
+              </FreezeShakeAnimatedBox>
+          </a>
+          <a  href="https://www.instagram.com" 
+              aria-label='Instagram profile link' 
+              target='_blank'>
+              <FreezeShakeAnimatedBox>
+                <FaInstagram fontSize={iconSize}/>
+              </FreezeShakeAnimatedBox>
+          </a>
         </Flex>
       </Flex>
     </Box>
