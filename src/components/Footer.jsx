@@ -48,7 +48,7 @@ const Footer = () => {
           spacing={4}
           justify='space-between'
           align='center'>
-          <Text fontWeight='semibold'>© {new Date().getFullYear()} Spight Sounds. All rights reserved.</Text>
+          <Text fontWeight='semibold'>© {new Date().getFullYear()} Spight on Sight, Home Studio. All rights reserved.</Text>
           <Flex w='216px' justify='space-between'>
             <SocialButton label='Soundcloud' href='#'>
               <Text fontSize='24px'>
