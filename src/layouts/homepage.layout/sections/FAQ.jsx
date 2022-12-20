@@ -14,12 +14,12 @@ const FAQ = () => {
           py='128px'
           px='64px' 
           justify='space-between' 
-          align='center'
+          align='start'
           bg='black'>
       <Box w='50%'>
         <Heading color='whiteAlpha.900' fontSize='64px'>FAQs.</Heading>
         <Text noOfLines={5} w='75%' fontSize='24px' py='16px' color='whiteAlpha.700' textAlign='start'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet non curabitur gravida arcu ac tortor.
+          The most commonly asked questions. Don't see your question in the list? No worries. Contact me and I will respond ASAP.
         </Text>
       </Box>
       <Box w='50%'>
