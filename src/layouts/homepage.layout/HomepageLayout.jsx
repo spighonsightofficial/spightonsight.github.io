@@ -1,5 +1,4 @@
 import React from 'react';
-import HomeSEO from './HomeSEO';
 import Navbar from '../../components/Navbar';
 import Hero from './sections/Hero';
 import Gallery from './sections/Gallery';
@@ -10,7 +9,6 @@ import FAQ from './sections/FAQ';
 import Policy from './sections/Policy';
 import Footer from '../../components/Footer';
 
-// export const Head = () => (<HomeSEO />)
 export const HomepageLayout = () => {
   return (
     <>
@@ -26,4 +24,3 @@ export const HomepageLayout = () => {
     </>
   );
 }
-
