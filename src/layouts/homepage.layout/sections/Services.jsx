@@ -1,13 +1,11 @@
 import React from 'react';
+import { servicesDetails as data } from '../../../data/services-details.data';
+import IconListItem from '../../../components/lists/IconListItem';
 import { FaCheck } from 'react-icons/Fa';
 import {
-  Box,
   Flex,
   Heading,
   Text,
-  List,
-  ListItem,
-  ListIcon,
 } from '@chakra-ui/react';
 
 const Services = () => {
@@ -22,62 +20,28 @@ const Services = () => {
           >
       <Flex direction='column' align='center' w='full'>
         <Heading fontSize='64px' color='whiteAlpha.900'>Services.</Heading>
-        <Text fontSize='28px' noOfLines={3} w='60%' textAlign='center' py='32px' color='whiteAlpha.700'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <Text fontSize='32px' 
+              noOfLines={3} 
+              w='60%' 
+              textAlign='center' 
+              pt='32px' 
+              pb='8px' 
+              color='whiteAlpha.800'
+              fontWeight='semibold'>
+          Imagine. Create. Repeat.
+        </Text>
+        <br />
+        <Text fontSize='28px' color='whiteAlpha.700' fontWeight='thin'>
+          Here's how I can help bring your sounds to life.
         </Text>
       </Flex>
-      <Flex w='full' py='80px' justify='space-around' align='center'>
-        <Box textAlign='left'>
-          <Heading as='h3' fontSize='48px' color='whiteAlpha.900' py='16px'>Producing</Heading>
-          <List pt='16px' textAlign='left' spacing='24px' fontSize='18px' color='whiteAlpha.700'>
-            <ListItem>
-              <ListIcon as={FaCheck} color={'yellow.400'}/>
-              Voice Overs
-            </ListItem>
-            <ListItem>
-              <ListIcon as={FaCheck} color={'yellow.400'}/>
-              Creating robust demos
-            </ListItem>
-            <ListItem>
-              <ListIcon as={FaCheck} color={'yellow.400'}/>
-              Crafting full productions
-            </ListItem>
-          </List>
-        </Box> 
-        <Box textAlign='left'>
-          <Heading as='h3' fontSize='48px' color='whiteAlpha.900' py='16px'>Mixing</Heading>
-          <List pt='16px' spacing='24px' fontSize='18px' color='whiteAlpha.700'>
-            <ListItem>
-              <ListIcon as={FaCheck} color={'yellow.400'}/>
-              Voice Overs
-            </ListItem>
-            <ListItem>
-              <ListIcon as={FaCheck} color={'yellow.400'}/>
-              Creating robust demos
-            </ListItem>
-            <ListItem>
-              <ListIcon as={FaCheck} color={'yellow.400'}/>
-              Crafting full productions
-            </ListItem>
-          </List>
-        </Box>
-        <Box textAlign='left'>
-          <Heading as='h3' fontSize='48px' color='whiteAlpha.900' py='16px'>Tracking</Heading>
-          <List pt='16px' spacing='24px' fontSize='18px' color='whiteAlpha.700'>
-            <ListItem>
-              <ListIcon as={FaCheck} color={'yellow.400'}/>
-              Voice Overs
-            </ListItem>
-            <ListItem>
-              <ListIcon as={FaCheck} color={'yellow.400'}/>
-              Creating robust demos
-            </ListItem>
-            <ListItem>
-              <ListIcon as={FaCheck} color={'yellow.400'}/>
-              Crafting full productions
-            </ListItem>
-          </List>
-        </Box>
+
+      <Flex w='full' py='80px' justify='space-around' align='start'>
+        {
+          data.map((service) => {
+            return <IconListItem icon={FaCheck} details={service} />;
+          })
+        }
       </Flex>
     </Flex>
   );
