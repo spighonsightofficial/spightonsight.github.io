@@ -21,14 +21,16 @@ const Footer = () => {
     <Box  as='footer'
           bg={useColorModeValue('black', 'gray.900')}
           color={useColorModeValue('whiteAlpha.900', 'gray.200')}
-          pt='64px'
     > 
       <Flex
         px='64px'
-        py='16px'
-        justify='start'
+        justify='center'
         align='center'>
-        <Flex w='300px' justify='space-between' fontWeight='thin'>
+        <Flex w='40%' 
+              justify='space-between' 
+              fontWeight='thin' 
+              fontSize='20px'
+              py='32px'>
           <Link href='#gallery'>Works</Link>
           <Link href='#services'>Services</Link>
           <Link href='#pricing'>Pricing</Link>
@@ -48,7 +50,10 @@ const Footer = () => {
           spacing={4}
           justify='space-between'
           align='center'>
-          <Text fontWeight='semibold'>© {new Date().getFullYear()} Spight on Sight, Home Studio. All rights reserved.</Text>
+          <Box>
+            <Text fontWeight='semibold'>© {new Date().getFullYear()} Spight on Sight, Home Studio.</Text>
+            <Text fontWeight='hairline'>All rights reserved.</Text>
+          </Box>
           <Flex w='216px' justify='space-between'>
             <SocialButton label='Soundcloud' href='#'>
               <Text fontSize='24px'>
