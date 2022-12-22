@@ -6,6 +6,31 @@ export const useSiteMetadata = () => {
       site {
         siteMetadata{
           title
+          owner
+          description
+          contactInfo {
+            businessEmail
+            businessPhone
+          }
+          socials {
+            facebook
+            instagram
+            linkedin
+          }
+          musicPlatforms {
+            spotify
+            soundcloud
+            beatstars
+          }
+          paymentMethod {
+            paypal
+          }
+          location {
+            city
+            stateAbbreviation
+            stateFullname
+            stateZipCode
+          }
         }
       }
     }
