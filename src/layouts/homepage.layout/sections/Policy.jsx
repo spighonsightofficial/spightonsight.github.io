@@ -11,7 +11,6 @@ const Policy = () => {
   return (
     <Flex id='policy'
           as='section' 
-          bg='black' 
           px='64px' 
           py='128px' 
           direction='column' 
@@ -20,7 +19,7 @@ const Policy = () => {
           >
       <Flex direction='column' align='center' w='full'>
         <Heading fontSize='64px' color='blackAlpha.900'>Policies.</Heading>
-        <Text fontSize='32px' 
+        <Text fontSize='40px' 
               noOfLines={3}
               w='60%' 
               textAlign='center'
@@ -31,44 +30,41 @@ const Policy = () => {
           Every studio has an unique atmosphere.
         </Text>
         <br />
-        <Text fontSize='28px' w='75%' color='blackAlpha.700' fontWeight='thin' textAlign='center'>
+        <Text fontSize='32px' w='75%' color='blackAlpha.700' fontWeight='thin' textAlign='center'>
           The atmosphere is created by the studio's mission, morals, and values.
           Being a faith-based studio, I do ask clients to please follow these policies during
           sessions.
         </Text>
       </Flex>
-      <SimpleGrid columns={3} spacing='64px' pt='64px'>
-        <Flex align='start' border='1px'>
+      <SimpleGrid columns={3} spacing='64px' pt='128px'>
+        <Flex align='start'>
           <Flex direction='column' justify='start' align='center'>
-            <Heading fontSize='32px' py='8px' fontWeight='bold'>Entourage.</Heading>
-            <Text fontsize='28px' noOfLines={5} fontWeight='thin' w='80%' textAlign='justify'>
+            <Heading fontSize='40px' py='8px' fontWeight='bold'>Entourage.</Heading>
+            <Text noOfLines={5} fontWeight='thin' w='80%' textAlign='justify' py='8px'>
               Due to limited room capacity, the client can
               only bring 2 others during a session.
             </Text>
           </Flex>
-          <Text></Text>
         </Flex>
-        <Flex align='start' border='1px'>
+        <Flex align='start' justify='space-between'>
           <Flex direction='column' justify='start' align='center'>
-            <Heading fontSize='32px' py='8px' fontWeight='bold'>Content.</Heading>
-            <Text fontsize='28px' noOfLines={5} fontWeight='thin' w='80%' textAlign='justify'>
+            <Heading fontSize='40px' py='8px' fontWeight='bold'>Content.</Heading>
+            <Text fontsize='32px' noOfLines={5} fontWeight='thin' w='80%' textAlign='justify' py='8px'>
               I do not support topics containing: excessive cussing,
               drugs, gun violence, and womanizing.
             </Text>
           </Flex>
           <Text></Text>
         </Flex>
-        <Flex align='start' border='1px'>
-          <Flex direction='column' justify='start' align='center' >
-            <Heading fontSize='32px' py='8px' fontWeight='bold'>Environment.</Heading>
-            <Text fontsize='28px' noOfLines={5} fontWeight='thin' w='80%' textAlign='justify'>
+        <Flex align='start' >
+          <Flex direction='column' justify='start' align='center'>
+            <Heading fontSize='40px' py='8px' fontWeight='bold'>Environment.</Heading>
+            <Text fontsize='32px' noOfLines={5} fontWeight='thin' w='80%' textAlign='justify' py='8px'>
               To maintain a clean environment, clients and client entourage are prohibited
               from smoking while in the home studio.
             </Text>
           </Flex>
-          <Text></Text>
         </Flex>
-        
       </SimpleGrid>       
     </Flex>
   );
