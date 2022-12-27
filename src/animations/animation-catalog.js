@@ -31,7 +31,7 @@ export const freezeShakeAnimation = keyframes`
   }
 `
 
-export const FreezeShakeSocialIcons = `keyframes {
+export const freezeShakeNoColorChangeAnimation = `keyframes {
   10%, 90% {
     transform: translate3d(-1px, 0, 0);
   }
@@ -48,6 +48,3 @@ export const FreezeShakeSocialIcons = `keyframes {
     transform: translate3d(4px, 0, 0);
   }
 }`
-
-
-
