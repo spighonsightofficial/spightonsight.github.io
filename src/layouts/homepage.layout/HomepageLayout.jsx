@@ -18,8 +18,8 @@ export const HomepageLayout = () => {
       <Services />
       <Pricing />
       <Contact />
-      <FAQ />
       <Policy />
+      <FAQ />
       <Footer />
     </>
   );

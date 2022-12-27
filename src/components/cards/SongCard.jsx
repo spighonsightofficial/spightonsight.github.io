@@ -58,11 +58,15 @@ const SongCard = () => {
           />
         </Box>
         <Flex direction='column' pt='32px'>
-          <Text fontSize='20px' fontWeight='hairline' pt='8px'>Sample.</Text>
-          <Flex pt='8px' justify='start' align='center'>
-            <Text color='yellow.400'>
-              <FaPlayCircle fontSize='48px' />
-            </Text>
+          <Flex pt='8px' justify='center' align='center'>
+            <Box color='yellow.400' 
+                 rounded='full'
+                 shadow='lg'
+                 _hover={{
+                  shadow: 'inner'
+                 }}>
+              <FaPlayCircle fontSize='48px'/>
+            </Box>
             <Text fontSize='24px' pl='16px'>Lorem, ipsum.</Text>
           </Flex>
         </Flex>
