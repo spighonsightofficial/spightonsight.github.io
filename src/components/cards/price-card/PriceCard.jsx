@@ -4,20 +4,21 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 
-const PriceCard = ({ children }) => {
+const PriceCard= ({ children, height, shouldClip=true }) => {
   return (
-    <Box
-      mb={4}
-      shadow='inner'
+      <Box
+      height={height || null}
+      shadow='2xl'
       borderWidth='1px'
       alignSelf={{ base: 'center', lg: 'flex-start' }}
       borderColor={useColorModeValue('gray.200', 'gray.500')}
       borderRadius='xl'
-      transition={'box-shadow 1s ease-in-out s'}
+      transition={'box-shadow 1s ease-in-out'}
       _hover={{
-        shadow: '2xl',
-      }}>
-      {children}
+        shadow: 'inner',
+      }}
+      overflow={ shouldClip ? 'clip' : ''}>
+       {children}
     </Box>
   );
 }
