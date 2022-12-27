@@ -25,6 +25,7 @@ export const priceDetails = [
     header: 'Mixing',
     rateType: 'LUMP',
     rate: 55.00,
+    subtext: 'mix',
     info: [
       'unlimited build minutes',
       'you get your own stems',

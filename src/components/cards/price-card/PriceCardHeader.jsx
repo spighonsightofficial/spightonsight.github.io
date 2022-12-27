@@ -6,7 +6,7 @@ import {
 } from '@chakra-ui/react';
 
 
-const PriceCardHeader = ({ details={}, fontSize='32px'}) => {
+const PriceCardHeader = ({ details={}, fontSize='32px', isPromo=false}) => {
   const { header, rateType, rate, subtext } = details;
   return (
     <Flex direction='column' 
@@ -14,11 +14,16 @@ const PriceCardHeader = ({ details={}, fontSize='32px'}) => {
           py='32px' 
           px='4px'
           >
-      <Text fontSize={fontSize} fontWeight='medium' py='8px'>
+      <Text fontSize={isPromo? '48px' : fontSize} 
+            fontWeight='medium' 
+            py='8px' 
+            >
         {header}
       </Text>
-      <Flex align='center'>
-        <Text fontSize='40px' fontWeight='normal'>
+      <Flex align='center'
+            justify='center'
+            >
+      <Text fontSize={isPromo ? '48px' : '40px'} fontWeight='normal'>
           $
         </Text>
         {

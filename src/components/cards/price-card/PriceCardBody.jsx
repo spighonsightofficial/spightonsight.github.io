@@ -5,7 +5,7 @@ import {
   Flex,
 } from '@chakra-ui/react';
 
-const PriceCardBody = ({details={}, isHorizontalLayout = false}) => {
+const PriceCardBody = ({details={}, isHorizontalLayout = false, isPromo=false}) => {
   return (
     <>
       {
@@ -14,15 +14,15 @@ const PriceCardBody = ({details={}, isHorizontalLayout = false}) => {
                 justify='space-between' 
                 pl='64px'
                 >
-            <PriceCardHeader details={details} />
-            <PriceCardFeatures details={details} />
+            <PriceCardHeader details={details} isPromo={isPromo}/>
+            <PriceCardFeatures details={details} isPromo={isPromo}/>
           </Flex>
         )
         :
         (
           <Flex direction='column' h='full'>
-            <PriceCardHeader details={details} />
-            <PriceCardFeatures details={details} />
+            <PriceCardHeader details={details} isPromo={isPromo}/>
+            <PriceCardFeatures details={details} isPromo={isPromo}/>
           </Flex>
         )
       }

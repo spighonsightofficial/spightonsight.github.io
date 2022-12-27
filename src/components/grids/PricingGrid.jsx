@@ -38,8 +38,8 @@ const PricingGrid = () => {
       </GridItem>
 
       <GridItem rowStart={1} rowEnd={4} colStart={2} colEnd={4}>
-        <PriceCard height='full' shouldClip={false}>
-          <PriceCardBody details={data[1]} />
+        <PriceCard height='full'>
+          <PriceCardBody details={data[1]} isPromo={true}/>
         </PriceCard>
       </GridItem>
 

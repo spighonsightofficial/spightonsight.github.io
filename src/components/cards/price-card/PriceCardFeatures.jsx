@@ -7,7 +7,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 
-const PriceCardFeatures = ({ details={}, hasCTAButton=true, shouldClip=true}) => {
+const PriceCardFeatures = ({ details={}, hasCTAButton=true, shouldClip=true, isPromo=false}) => {
   return (
     <Flex
       direction='column'
@@ -24,7 +24,7 @@ const PriceCardFeatures = ({ details={}, hasCTAButton=true, shouldClip=true}) =>
               align='center' 
               h='full'
         >
-          <PricingList icon={FaMixer} details={details}/>
+          <PricingList icon={FaMixer} details={details} isPromo={isPromo}/>
           <PriceCardButton />
         </Flex>
         :
