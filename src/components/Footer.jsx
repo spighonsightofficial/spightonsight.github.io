@@ -1,5 +1,7 @@
 import React from 'react';
+import  { navLinks as links } from '../data/nav-links.data';
 import SocialButton from '../components/buttons/SocialButton';
+import NavLink from './links/Navlink';
 
 import { 
   FaInstagram,
@@ -31,11 +33,10 @@ const Footer = () => {
               fontWeight='thin' 
               fontSize='20px'
               py='32px'>
-          <Link href='#gallery'>Works</Link>
-          <Link href='#services'>Services</Link>
-          <Link href='#pricing'>Pricing</Link>
-          <Link href='#contact'>Contact</Link>
-          <Link href='#faq'>FAQs</Link>
+          {links.map((link) => (
+              <NavLink key={link.id} link={link} paddingLR='24px' fontSize='16px'/>
+            ))
+          }
         </Flex>
       </Flex>
 
