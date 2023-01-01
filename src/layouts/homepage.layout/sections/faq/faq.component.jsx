@@ -1,5 +1,23 @@
 import React from 'react';
-import MultiExpansionAccordion from '../../../components/accordions/MultiExpansionAccordion';
+
+import {
+  responsiveHeaderFontSize,
+  responsiveBodyTextFontSize,
+  responsiveHorizontalPadding,
+  responsiveVerticalPadding,
+} from '../../../../utils/global_responsive_values.utility';
+
+import {
+  responsiveTextAlign,
+  responsiveWidth,
+  responsiveBodyTextBoxWidth,
+  responsiveAccordionVerticalPadding,
+  responsiveFlexColumnDirection,
+  responsiveFlexColumnJustify,
+  responsiveFlexColumnAlign,
+} from './faq.responsive_values';
+
+import MultiExpansionAccordion from '../../../../components/accordions/multi-expansion-accordion/multi-expansion-accordion.component';
 import {
   Flex,
   Heading,
@@ -11,18 +29,36 @@ const FAQ = () => {
   return (
     <Flex as='section'
           id='faq' 
-          py='128px'
-          px='64px' 
-          justify='space-between' 
-          align='start'
-          bg='black'>
-      <Box w='50%'>
-        <Heading color='whiteAlpha.900' fontSize='64px'>FAQs.</Heading>
-        <Text noOfLines={5} w='75%' fontSize='24px' py='16px' color='whiteAlpha.700' textAlign='start'>
+          py={responsiveVerticalPadding}
+          px={responsiveHorizontalPadding}
+          direction={responsiveFlexColumnDirection}
+          justify={responsiveFlexColumnJustify}
+          align={responsiveFlexColumnAlign}
+          bg='black'
+          >
+      <Flex w={responsiveWidth}
+            direction={responsiveFlexColumnDirection}
+            justify={responsiveFlexColumnJustify}
+            align={responsiveFlexColumnAlign}
+            >
+        <Heading color='whiteAlpha.900' 
+                 fontSize={responsiveHeaderFontSize}
+                 >
+          FAQs.
+        </Heading>
+        <Text noOfLines={10} 
+              w={responsiveBodyTextBoxWidth}
+              fontSize={responsiveBodyTextFontSize}
+              py='16px' 
+              color='whiteAlpha.700' 
+              textAlign={responsiveTextAlign}
+              >
           The most commonly asked questions. Don't see your question in the list? No worries. Contact me and I will respond ASAP.
         </Text>
-      </Box>
-      <Box w='50%'>
+      </Flex>
+      <Box w={responsiveWidth}
+           py={responsiveAccordionVerticalPadding}
+           >
         <MultiExpansionAccordion />
       </Box>
     </Flex>
