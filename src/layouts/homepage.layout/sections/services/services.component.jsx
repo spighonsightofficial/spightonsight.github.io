@@ -1,6 +1,22 @@
 import React from 'react';
-import { servicesDetails } from '../../../data/details/services-details.data';
-import IconListItem from '../../../components/lists/IconListItem';
+import {
+  responsiveHeaderFontSize,
+  responsiveSubheaderFontSize,
+  responsiveBodyTextFontSize,
+  responsiveHorizontalPadding,
+  responsiveVerticalPadding,
+} from '../../../../utils/global_responsive_values.utility';
+
+import {
+
+  responsiveBodyTextBoxWidth,
+  responsiveFlexDirection,
+  responsiveFlexColumnAlign,
+  responsiveFlexColumnJustify,
+} from './services.responsive_values';
+
+import { servicesDetails } from '../../../../data/details/services-details.data';
+import IconListItem from '../../../../components/lists/list-items/icon-list-item/iconlistitem.component';
 import { FaCheck } from 'react-icons/Fa';
 import {
   Flex,
@@ -13,35 +29,54 @@ const Services = () => {
     <Flex id='services'
           as='section' 
           bg='black' 
-          px='64px' 
-          py='128px' 
+          px={responsiveHorizontalPadding}
+          py={responsiveVerticalPadding}
           direction='column' 
           align='center'
           >
-      <Flex direction='column' align='center' w='full'>
-        <Heading fontSize='64px' color='whiteAlpha.900'>Services.</Heading>
-        <Text fontSize='32px' 
+      <Flex direction='column' 
+            align='center' 
+            w='full'
+            >
+        <Heading fontSize={responsiveHeaderFontSize} 
+                 color='whiteAlpha.900'
+                 >
+            Services.
+        </Heading>
+        <Text fontSize={responsiveSubheaderFontSize}
               noOfLines={3} 
-              w='60%' 
+              w={responsiveBodyTextBoxWidth} 
               textAlign='center' 
               pt='32px' 
               pb='8px' 
               color='whiteAlpha.800'
-              fontWeight='semibold'>
+              fontWeight='semibold'
+              >
           Imagine. Create. Repeat.
         </Text>
         <br />
-        <Text fontSize='28px' color='whiteAlpha.700' fontWeight='thin'>
+        <Text fontSize={responsiveBodyTextFontSize} 
+              color='whiteAlpha.700' 
+              fontWeight='thin'
+              w={responsiveBodyTextBoxWidth}
+              textAlign='center'
+              >
           Here's how I can help bring your sounds to life.
         </Text>
       </Flex>
 
-      <Flex w='full' py='80px' justify='space-around' align='start'>
-        {
-          servicesDetails.map((service) => {
-            return <IconListItem icon={FaCheck} details={service} />;
-          })
-        }
+      <Flex w='full'
+            py='72px' 
+            direction={responsiveFlexDirection}
+            // justify='space-around' 
+            // justify={responsiveFlexColumnJustify}
+            align={responsiveFlexColumnAlign}
+            >
+          {
+            servicesDetails.map(
+              (service) => <IconListItem icon={FaCheck} details={service} />
+            )
+          }
       </Flex>
     </Flex>
   );

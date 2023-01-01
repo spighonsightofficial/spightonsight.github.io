@@ -1,4 +1,10 @@
 import React from 'react';
+
+import {
+  responsiveHorizontalPadding,
+  responsiveVerticalPadding,
+} from '../../../../utils/global_responsive_values.utility';
+
 import {
   responsiveFontSize,
   responsiveNumberOfLines,
@@ -7,11 +13,6 @@ import {
   responsiveFlexColumnJustify,
   responsiveFlexRowJustify,
 } from './hero.responsive_values';
-
-import {
-  responsiveHorizontalPadding,
-  responsiveVerticalPadding,
-} from '../../../../utils/global_responsive_values.utility';
 
 import { socialLinks } from '../../../../data/links/social-links.data';
 import SocialLink from '../../../../components/links/SocialLink.component';
@@ -48,7 +49,6 @@ const Hero = () => {
         </Box>
         <Flex mt='64px' 
               w={responsiveWidth} 
-              // border='1px' 
               justify={responsiveFlexRowJustify} 
               color='whiteAlpha.600'
               >
