@@ -1,5 +1,5 @@
 import React from 'react';
-import  { navLinks as links } from '../data/nav-links.data';
+import { navLinks } from '../data/links/nav-links.data';
 import SocialButton from '../components/buttons/SocialButton';
 import NavLink from './links/Navlink';
 
@@ -33,7 +33,7 @@ const Footer = () => {
               fontWeight='thin' 
               fontSize='20px'
               py='32px'>
-          {links.map((link) => (
+          {navLinks.map((link) => (
               <NavLink key={link.id} link={link} paddingLR='24px' fontSize='16px'/>
             ))
           }

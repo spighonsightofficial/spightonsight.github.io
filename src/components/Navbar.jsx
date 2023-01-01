@@ -1,6 +1,6 @@
 import React from 'react';
 import NavLink from '../components/links/Navlink';
-import { navLinks } from '../data/nav-links.data';
+import { navLinks } from '../data/links/nav-links.data';
 import { MdMenu, MdClose} from 'react-icons/md';
 import {
   Box,

@@ -1,5 +1,5 @@
 import React from 'react';
-import {accordionItems as data} from '../../data/accordion-items.data';
+import { accordionItems } from '../../data/items/accordion-items.data';
 import {
   Accordion,
   AccordionItem,
@@ -16,7 +16,7 @@ const MultiExpansionAccordion = () => {
     <Box bg='white' py='16px' rounded='xl'>
       <Accordion allowMultiple>
         {
-          data.map( ({ question, answer }) => {
+          accordionItems.map( ({ question, answer }) => {
             return (
               <AccordionItem>
                 <Heading as='h3'>

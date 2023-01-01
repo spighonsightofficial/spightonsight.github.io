@@ -1,5 +1,5 @@
 import React from 'react';
-import { priceDetails as data } from '../../data/price-details.data';
+import { priceDetails } from '../../data/details/price-details.data';
 import PriceCard from '../cards/price-card/PriceCard';
 // import PriceCardBadge from '../cards/price-card/PriceCardBadge';
 import PriceCardBody from '../cards/price-card/PriceCardBody';
@@ -33,37 +33,37 @@ const PricingGrid = () => {
     >
       <GridItem rowStart={1} rowEnd={3} colStart={1} colEnd={2}>
         <PriceCard height='full'>
-          <PriceCardBody details={data[0]} />
+          <PriceCardBody details={priceDetails[0]} />
         </PriceCard>
       </GridItem>
 
       <GridItem rowStart={1} rowEnd={4} colStart={2} colEnd={4}>
         <PriceCard height='full'>
-          <PriceCardBody details={data[1]} isPromo={true}/>
+          <PriceCardBody details={priceDetails[1]} isPromo={true}/>
         </PriceCard>
       </GridItem>
 
       <GridItem rowStart={1} rowEnd={3} colStart={4} colEnd={5}>
         <PriceCard height='full'>
-          <PriceCardBody details={data[5]}/>
+          <PriceCardBody details={priceDetails[5]}/>
         </PriceCard>
       </GridItem>
 
       <GridItem rowStart={3} rowEnd={5} colStart={1} colEnd={2}>
         <PriceCard height='full'>
-          <PriceCardBody details={data[2]}/>
+          <PriceCardBody details={priceDetails[2]}/>
         </PriceCard>
       </GridItem>
 
       <GridItem rowStart={4} rowEnd={5} colStart={2} colEnd={4}>
         <PriceCard height='full'>
-          <PriceCardBody details={data[3]} isHorizontalLayout={true}/>
+          <PriceCardBody details={priceDetails[3]} isHorizontalLayout={true}/>
         </PriceCard>
       </GridItem> 
 
       <GridItem rowStart={3} rowEnd={5} colStart={4} colEnd={5}>
         <PriceCard height='full'>
-          <PriceCardBody details={data[4]} /> 
+          <PriceCardBody details={priceDetails[4]} /> 
         </PriceCard>
       </GridItem>
     </Grid>
