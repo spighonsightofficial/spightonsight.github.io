@@ -53,9 +53,13 @@ const Navbar = () => {
             <Flex as='nav'
                   display={{ base: 'none', md: 'flex' }}
                   >
-              {navLinks.map((link) => (
-                <NavLink key={link.id} link={link} paddingLR='24px'/>
-              ))}
+              {
+                navLinks.map(
+                  (link) => <NavLink key={link.id} 
+                                     link={link} 
+                                     paddingLR='24px'/>
+                )
+              }
             </Flex>
           </Flex>
 
