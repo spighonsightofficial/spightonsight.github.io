@@ -1,7 +1,7 @@
 import React from 'react';
 import { freezeShakeAnimation as Freeze } from '../../../animations/animation-catalog';
 import { Box } from '@chakra-ui/react';
-import { responsiveIconSize } from '../../../utils/responsiveValues.utility';
+import { responsiveIconSize } from '../../../utils/global_responsive_values.utility';
 
 const FreezeShakeAnimatedBox = ({ children }) => {
   return (

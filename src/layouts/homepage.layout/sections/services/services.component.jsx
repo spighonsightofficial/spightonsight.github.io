@@ -1,5 +1,5 @@
 import React from 'react';
-import { servicesDetails as data } from '../../../data/services-details.data';
+import { servicesDetails } from '../../../data/details/services-details.data';
 import IconListItem from '../../../components/lists/IconListItem';
 import { FaCheck } from 'react-icons/Fa';
 import {
@@ -38,7 +38,7 @@ const Services = () => {
 
       <Flex w='full' py='80px' justify='space-around' align='start'>
         {
-          data.map((service) => {
+          servicesDetails.map((service) => {
             return <IconListItem icon={FaCheck} details={service} />;
           })
         }

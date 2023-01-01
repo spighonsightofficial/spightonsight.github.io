@@ -1,18 +1,20 @@
 import React from 'react';
-import { socialLinks } from '../../../data/links/social-links.data';
-import SocialLink from '../../../components/links/SocialLink.component';
-
 import {
   responsiveFontSize,
   responsiveNumberOfLines,
-  responsiveHorizontalPadding,
-  responsiveVerticalPadding,
   responsiveWidth,
   responsiveFlexColumnAlign,
   responsiveFlexColumnJustify,
   responsiveFlexRowJustify,
-} from '../../../utils/responsiveValues.utility';
+} from './hero.responsive_values';
 
+import {
+  responsiveHorizontalPadding,
+  responsiveVerticalPadding,
+} from '../../../../utils/global_responsive_values.utility';
+
+import { socialLinks } from '../../../../data/links/social-links.data';
+import SocialLink from '../../../../components/links/SocialLink.component';
 import {
   Box,
   Flex,
