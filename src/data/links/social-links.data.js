@@ -4,7 +4,7 @@ export const socialLinks = [
     linkTo: 'soundcloud',
     href: 'https://www.soundcloud.com',
     ariaLabel: 'Spight On Sight Soundcloud profile, link',
-    target: '#gallery'
+    target: '_blank'
   },
   {
     id: 2,
@@ -24,14 +24,14 @@ export const socialLinks = [
     id: 4,
     linkTo: 'linkedin',
     href: 'https://www.linkedin.com',
-    ariaLabel: 'Go to Contact Me section, link',
+    ariaLabel: 'Spight On Sight Linkedin profile, link',
     target: '_blank',
   },
   {
     id: 5,
     linkTo: 'instagram',
     href: 'https://www.instagram.com',
-    ariaLabel: 'Go to Frequently Asked Questions section, link',
+    ariaLabel: 'Spight On Sight Instagram profile, link',
     target: '_blank',
   },
 ];

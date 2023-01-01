@@ -8,7 +8,7 @@ import {
   FaInstagram,
  } from 'react-icons/fa';
 
-const SocialLink = (link) => {
+const SocialLink = ({ link={} }) => {
   const { linkTo, href, ariaLabel, target } = link;
   return (
     <a  href={href}
@@ -29,11 +29,3 @@ const SocialLink = (link) => {
 }
 
 export default SocialLink;
-
-{/* <a  href="https://www.soundcloud.com" 
-              aria-label='Soundcloud profile link' 
-              target='_blank'>
-              <FreezeShakeAnimatedBox>
-                <FaSoundcloud />
-              </FreezeShakeAnimatedBox>
-          </a> */}
