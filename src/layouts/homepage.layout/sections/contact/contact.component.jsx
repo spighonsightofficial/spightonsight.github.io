@@ -5,11 +5,10 @@ import {
   responsiveBodyTextFontSize,
   responsiveHorizontalPadding,
   responsiveVerticalPadding,
-
 } from '../../../../utils/global_responsive_values.utility';
 
 import {
-  responsiveHeaderVerticalPadding,
+  responsiveTextAlign,
   responsiveBodyTextBoxWidth,
   responsiveFormWidth,
   responsiveFormPaddingTop,
@@ -48,7 +47,7 @@ const Contact = () => {
               color='whiteAlpha.700' 
               noOfLines={8} 
               w={responsiveBodyTextBoxWidth} 
-              textAlign='left'
+              textAlign={responsiveTextAlign}
               >
           Collaboration is the key to producing quality music. I've got you covered.
         </Text>
