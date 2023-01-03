@@ -1,13 +1,15 @@
 import React from 'react';
 
 import {
+  responsiveFeatureBlockBoxWidth,
   responsiveFlexDirection,
   responsiveVerticalPadding,
 } from './featureblock.responsive_values';
 
 import TextBlock from '../text-block/textblock.component';
 import {
-  Flex
+  Flex,
+  Box,
 } from '@chakra-ui/react';
 
 const FeatureBlock = ({ details=[] }) => {
@@ -19,7 +21,10 @@ const FeatureBlock = ({ details=[] }) => {
           >
        {
         details.map(
-          (policy) => <TextBlock detail={policy} />
+          (policy) => 
+            <Box w={responsiveFeatureBlockBoxWidth}>
+              <TextBlock detail={policy} />
+            </Box>
         )
        }
       </Flex>
