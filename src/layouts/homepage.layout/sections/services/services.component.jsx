@@ -8,7 +8,6 @@ import {
 } from '../../../../utils/global_responsive_values.utility';
 
 import {
-
   responsiveBodyTextBoxWidth,
   responsiveFlexDirection,
   responsiveFlexColumnAlign,
@@ -66,7 +65,7 @@ const Services = () => {
       </Flex>
 
       <Flex w='full'
-            py='72px' 
+            pt='72px'
             direction={responsiveFlexDirection}
             // justify='space-around' 
             // justify={responsiveFlexColumnJustify}
