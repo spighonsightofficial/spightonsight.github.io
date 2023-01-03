@@ -2,9 +2,10 @@ import React from 'react';
 
 import {
   responsiveNavLinkBarFontSize,
-  responsiveNavLinkBarFlexDirection,
+  responsiveBarWidth,
   responsiveNavLinkBarVerticalPadding,
   responsiveNavLinkBarHorizontalPadding,
+  responsiveNavLinkBarFlexDirection,
   responsiveNavLinkBarFlexColumnJustify,
   responsiveNavLinkBarFlexColumnAlign,
 } from './navlinkbar.responsive_styles';
@@ -20,12 +21,11 @@ const NavLinkBar = ({ links=[] }) => {
           justify='center'
           align='center'
           >
-      <Flex w='full'
+      <Flex w={responsiveBarWidth}
             direction={responsiveNavLinkBarFlexDirection}
             justify={responsiveNavLinkBarFlexColumnJustify}
             align={responsiveNavLinkBarFlexColumnAlign}
-            fontWeight='thin' 
-            fontSize='20px'
+            fontWeight='thin'
             py='32px'
             >
         {
