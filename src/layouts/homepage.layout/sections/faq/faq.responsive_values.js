@@ -1,5 +1,5 @@
 // Typograhy & Sizing
-const responsiveTextAlign=['center', null, null, 'left', null];
+const responsiveTextAlign=['center', null, 'left', null, null];
 
 // Width & Height
 const responsiveWidth = ['90%', null, '50%', null, null];
@@ -10,16 +10,16 @@ const responsiveBodyTextBoxWidth = ['92%', '80%', null, null, null];
 const responsiveAccordionVerticalPadding = ['64px', null, null, '0px', null];
 
 // Layout (Flex)
-const responsiveFlexColumnDirection = ['column', null, null, 'row', null];
+const responsiveFlexDirection = ['column', null, 'row', null, null];
 const responsiveFlexColumnJustify = ['space-between', null, null, null, null];
-const responsiveFlexColumnAlign = ['center', null, null, null, null];
+const responsiveFlexColumnAlign = ['center', null, 'start', null, null];
 
 export {
   responsiveTextAlign,
   responsiveWidth,
   responsiveBodyTextBoxWidth,
   responsiveAccordionVerticalPadding,
-  responsiveFlexColumnDirection,
+  responsiveFlexDirection,
   responsiveFlexColumnJustify,
   responsiveFlexColumnAlign,
 };

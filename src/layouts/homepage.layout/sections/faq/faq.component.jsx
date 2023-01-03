@@ -12,7 +12,7 @@ import {
   responsiveWidth,
   responsiveBodyTextBoxWidth,
   responsiveAccordionVerticalPadding,
-  responsiveFlexColumnDirection,
+  responsiveFlexDirection,
   responsiveFlexColumnJustify,
   responsiveFlexColumnAlign,
 } from './faq.responsive_values';
@@ -31,13 +31,13 @@ const FAQ = () => {
           id='faq' 
           py={responsiveVerticalPadding}
           px={responsiveHorizontalPadding}
-          direction={responsiveFlexColumnDirection}
+          direction={responsiveFlexDirection}
           justify={responsiveFlexColumnJustify}
           align={responsiveFlexColumnAlign}
           bg='black'
           >
       <Flex w={responsiveWidth}
-            direction={responsiveFlexColumnDirection}
+            direction='column'
             justify={responsiveFlexColumnJustify}
             align={responsiveFlexColumnAlign}
             >
