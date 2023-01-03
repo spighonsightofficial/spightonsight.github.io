@@ -6,6 +6,7 @@ import {
   responsiveListBoxWidth,
   responsiveListHeaderVerticalPadding,
   responsiveListBodyVerticalPaddingBottom,
+  responsiveListBodyHorizontalPaddingLeft,
 } from './iconlistitem.responsive_values';
 
 import {
@@ -25,6 +26,7 @@ const IconListItem = ({ icon, details={} }) => {
     <Flex direction='column'
           align='center'
           w='full'
+          border='1px' borderColor='white'
           >
       <Heading as='h3'
                fontSize={responsiveListHeaderFontSize}
@@ -38,6 +40,7 @@ const IconListItem = ({ icon, details={} }) => {
             spacing='24px'
             w={responsiveListBoxWidth}
             pb={responsiveListBodyVerticalPaddingBottom}
+            pl={responsiveListBodyHorizontalPaddingLeft}
             >
         {
           items.map(

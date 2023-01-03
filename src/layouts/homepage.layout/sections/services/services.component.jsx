@@ -64,11 +64,9 @@ const Services = () => {
         </Text>
       </Flex>
 
-      <Flex w='full'
+      <Flex w='90%'
             pt='72px'
             direction={responsiveFlexDirection}
-            // justify='space-around' 
-            // justify={responsiveFlexColumnJustify}
             align={responsiveFlexColumnAlign}
             >
           {
