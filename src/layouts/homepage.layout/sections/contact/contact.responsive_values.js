@@ -10,15 +10,20 @@ const responsiveHeaderVerticalPadding = ['8px', null, null, null, null];
 const responsiveFormPaddingTop = ['64px', null, '0px', null, null];
 
 // Layout (Flex)
-const responsiveFlexColumnJustify = [];
+const responsiveFlexDirection = ['column', null, 'row', null, null];
+const responsiveFlexColumnAlign = ['center', null, 'start', null, null];
+const responsiveHeaderFlexColumnAlign = ['center', null, 'start', null, null];
+
 
 
 // TODO: START HERE - Fixing Column layout in contact services
 export {
   responsiveTextAlign,
-  responsiveHeaderVerticalPadding,
-  responsiveFlexColumnJustify,
   responsiveBodyTextBoxWidth,
   responsiveFormWidth,
   responsiveFormPaddingTop,
+  responsiveHeaderVerticalPadding,
+  responsiveFlexDirection,
+  responsiveFlexColumnAlign,
+  responsiveHeaderFlexColumnAlign,
 }

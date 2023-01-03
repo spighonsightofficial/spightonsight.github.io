@@ -1,4 +1,9 @@
 import React from 'react';
+
+import {
+  responsiveEmailInputLabelFontSize,
+} from './email-input.responsive_values';
+
 import { MdMail } from 'react-icons/md';
 import {
   FormControl,
@@ -8,10 +13,15 @@ import {
   Input
 } from '@chakra-ui/react';
 
-const EmailInput = ({ size='sm' }) => {
+const EmailInput = ({ size='sm', required=true, disabled=false }) => {
   return (
-    <FormControl isDisabled isRequired>
-      <FormLabel>Email address</FormLabel>
+    <FormControl isRequired={required} 
+                 isDisabled={disabled}
+                 >
+      <FormLabel fontSize={responsiveEmailInputLabelFontSize}
+                 >
+        Email address
+      </FormLabel>
       <InputGroup>
         <InputLeftElement pointerEvents='none' children={<MdMail />}/>
         <Input  type='email' 

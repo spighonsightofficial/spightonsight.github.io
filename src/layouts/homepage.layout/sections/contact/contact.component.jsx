@@ -12,6 +12,9 @@ import {
   responsiveBodyTextBoxWidth,
   responsiveFormWidth,
   responsiveFormPaddingTop,
+  responsiveFlexDirection,
+  responsiveFlexColumnAlign,
+  responsiveHeaderFlexColumnAlign,
 } from './contact.responsive_values';
 
 import ContactForm from '../../../../components/forms/contact-form/contact-form.component';
@@ -28,14 +31,14 @@ const Contact = () => {
           as='section'
           px={responsiveHorizontalPadding}
           py={responsiveVerticalPadding}
-          direction='column'
+          direction={responsiveFlexDirection}
           justify='center'
-          align='center'
+          align={responsiveFlexColumnAlign}
           bg='black'
           >
       <Flex direction='column' 
             justify='center' 
-            align='center'
+            align={responsiveHeaderFlexColumnAlign}
             >
         <Heading fontSize={responsiveHeaderFontSize} 
                  color='whiteAlpha.900'

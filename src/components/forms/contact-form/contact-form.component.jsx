@@ -1,15 +1,12 @@
 import React from 'react';
 
 import {
-  responsiveFormInputWidth,
-  responsiveFormInputPaddingRight,
   responsiveFromInputHorizontalPadding,
-  responsiveFormFlexColumnJustify,
 } from './contact-form.responsive_values';
 
-import EmailInput from '../../inputs/EmailInput';
-import TextInput from '../../inputs/TextInput';
-import MessageArea from '../../inputs/input-areas/MessageArea';
+import EmailInput from '../../inputs/email-input/email-input.component';
+import TextInput from '../../inputs/text-input/textinput.component';
+import MessageArea from '../../inputs/input-areas/message-area/messagearea.component';
 import { MdPerson } from 'react-icons/md';
 import {
   Box,
@@ -19,31 +16,24 @@ import {
 
 const ContactForm = () => {
   return (
-    <Box  pt=''
-          alignSelf={{ base: 'center', lg: 'flex-start' }}
+    <Box  borderRadius='xl'
           borderColor={useColorModeValue('gray.200', 'gray.500')}
-          borderRadius='xl'
-          transition={'box-shadow 1s ease-in-out'}
-          _hover={{
-            shadow: 'inner',
-          }}
           bg='white'
-    >
-      <Flex direction={responsiveFormFlexColumnJustify}
-            align='start' 
+          >
+      <Flex direction='column'
             justify='space-between'
+            align='center' 
             px={responsiveFromInputHorizontalPadding}
             py='32px'
-           >
-        <Flex w={responsiveFormInputWidth}
-              direction='column'
-              py='32px'>
-          <EmailInput size='lg'/>
-          <TextInput placeholder='Drake' label='First Name' leftIcon={<MdPerson />} size='lg'/>
-        </Flex>
-        <Box w={responsiveFormInputWidth}>
-          <MessageArea />
-        </Box>
+            >
+        <EmailInput size='lg' />
+        <TextInput placeholder='Drake' 
+                   label='First Name' 
+                   leftIcon={<MdPerson />} 
+                   size='lg'
+                   verticalPadding='40px'
+                   />
+        <MessageArea verticalPadding='16px'/>
       </Flex>
     </Box>
   );
