@@ -1,4 +1,9 @@
 import React from 'react';
+
+import {
+  responsiveBorderRadius,
+} from './socialbutton.responsive_values';
+
 import {
   Button,
   useColorModeValue,
@@ -9,7 +14,7 @@ const SocialButton = ({ children, label, href}) => {
   return (
     <Button
       bg={useColorModeValue('whiteAlpha.900', 'whiteAlpha.100')}
-      rounded='md'
+      rounded={responsiveBorderRadius}
       w='32px'
       h='32px'
       cursor='pointer'

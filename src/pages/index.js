@@ -1,5 +1,5 @@
 import React from 'react';
-import SEO from '../components/SEO';
+import SEO from '../components/misc/SEO';
 import { HomepageLayout } from '../layouts/homepage.layout/HomepageLayout';
 
 // Most follow the export default method. 

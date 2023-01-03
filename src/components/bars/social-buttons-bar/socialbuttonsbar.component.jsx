@@ -1,7 +1,8 @@
 import React from 'react';
 
 import {
-
+  responsiveBarWidth,
+  responsiveIconFontSize,
 } from './socialbuttonsbar.responsive_values';
 
 import {
@@ -21,7 +22,7 @@ import {
 
 const SocialButtonsBar = () => {
   return (
-    <Flex w='216px' 
+    <Flex w={responsiveBarWidth}
           justify='space-between'
           >
         {
@@ -30,7 +31,8 @@ const SocialButtonsBar = () => {
               <SocialButton label={link.linkTo} 
                             href={link.href}
                             >
-                <Text fontSize='24px'>
+                <Text fontSize={responsiveIconFontSize}
+                      >
                     {
                       (link.linkTo === 'soundcloud')  ? <FaSoundcloud color='black' /> :
                       (link.linkTo === 'spotify')     ? <FaSpotify color='black' />    :
