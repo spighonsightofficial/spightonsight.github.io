@@ -1,8 +1,8 @@
 import React from 'react';
 import { FiSun, FiMoon } from 'react-icons/fi';
-import { useColorMode } from '@chakra-ui/color-mode';
-import {
+import { 
   Button,
+  useColorMode,
 } from '@chakra-ui/react';
 
 const ColorModeToggler = () => {
@@ -10,7 +10,7 @@ const ColorModeToggler = () => {
   return (
     <Button 
       onClick={toggleColorMode}
-      p='4px'
+      p='8px'
       size='lg'
       variant='outline'
     >
