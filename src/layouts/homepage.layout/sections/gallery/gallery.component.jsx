@@ -61,7 +61,7 @@ const Gallery = () => {
           Music is collaborative. Like what you hear? Let's connect.
         </Text>
       </Flex>
-      {/* <SongCarousel /> */}
+      <SongCarousel />
     </Flex>
   );
 }
