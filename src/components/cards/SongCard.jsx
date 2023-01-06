@@ -1,17 +1,17 @@
 import React from 'react';
-import { FaPlayCircle } from 'react-icons/fa';
-import Picture1 from '../../album-1.jpg';
+
+import Picture1 from '../../assets/images/album-1.jpg';
+import AudioPlayer from '../players/audio-player/audioplayer.component';
 import {
   Box,
   Flex,
-  Heading,
   Text,
   Center,
   useColorModeValue,
   Image,
 } from '@chakra-ui/react';
 
-const SongCard = () => {
+const SongCard = ({src='', title='Sample Me'}) => {
   console.log(Picture1);
   console.log(typeof Picture1);
   return (
@@ -58,16 +58,15 @@ const SongCard = () => {
           />
         </Box>
         <Flex direction='column' pt='32px'>
-          <Flex pt='8px' justify='center' align='center'>
-            <Box color='yellow.400' 
-                 rounded='full'
-                 shadow='lg'
-                 _hover={{
-                  shadow: 'inner'
-                 }}>
-              <FaPlayCircle fontSize='48px'/>
-            </Box>
-            <Text fontSize='24px' pl='16px'>Lorem, ipsum.</Text>
+          <Flex pt='8px' justify='start' align='center'>
+            <AudioPlayer src={src}/>
+            <Text fontSize='24px'
+                  fontWeight='semibold'
+                  pl='32px'
+                  noOfLines={1}
+                  >
+              {title.toUpperCase()}
+            </Text>
           </Flex>
         </Flex>
       </Box>

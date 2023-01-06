@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { FaPlay, FaPause } from 'react-icons/fa';
 import {
   Button,
@@ -19,12 +19,21 @@ const AudioPlayer = ({ src='' }) => {
     }
   }
 
+  useEffect(() => {
+    setIsPlaying(false);
+  }, []);
+
   return (
     <>
       <audio ref={audioEl} src={src} />
       <Button onClick={togglePlay}
               borderRadius='md'
-              shadow='md'
+              shadow='lg'
+              size='lg'
+              cursor='pointer'
+              _hover={{
+                'shadow': 'sm',
+              }}
               >
         { 
           (isPlaying) ? <FaPause /> : <FaPlay />

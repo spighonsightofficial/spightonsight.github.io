@@ -1,9 +1,14 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
+import DemoOne from '../../assets/demos/demo-1/demo-1.wav';
+import DemoTwo from '../../assets/demos/demo-2/demo-2.wav';
+import DrillDemo from '../../assets/demos/demo-3-drill/drill.wav';
+import SetMeFreeDemo from '../../assets/demos/demo-4-set-me-free/demo-set-me-free.wav';
+import { demoItems } from '../../data/items/demo-items.data';
 import SongCard from '../../components/cards/SongCard';
 import {
   HStack,
@@ -33,16 +38,16 @@ export default function App() {
         <SwiperSlide>
           <Flex justify='center' align='center'>
             <HStack spacing={16}>
-              <SongCard />
-              <SongCard />
+              <SongCard src={DemoOne} title={'Demo One'}/>
+              <SongCard src={SetMeFreeDemo} title={'Set Me Free'}/>
             </HStack>
           </Flex>
         </SwiperSlide>
         <SwiperSlide>
           <Flex justify='center' align='center'>
             <HStack spacing={16}>
-              <SongCard />
-              <SongCard />
+              <SongCard src={DemoTwo} title={'Demo Two'}/>
+              <SongCard src={DrillDemo} title={'Drill'}/>
             </HStack>
           </Flex>
         </SwiperSlide>
