@@ -1,10 +1,18 @@
 import React from 'react';
-import SongCarousel from '../../../components/carousels/SongCarousel';
+
 import { 
-  responsiveNumberOfLines,
+  responsiveHeaderFontSize,
+  responsiveSubheaderFontSize,
+  responsiveBodyTextFontSize,
   responsiveHorizontalPadding,
   responsiveVerticalPadding,
-} from '../../../utils/global_responsive_values.utility';
+} from '../../../../utils/global_responsive_values.utility';
+
+import {
+  responsiveBodyTextBoxWidth,
+} from './gallery.responsive_values';
+
+import SongCarousel from '../../../../components/carousels/songcarousel.component';
 
 import {
   Flex,
@@ -22,25 +30,38 @@ const Gallery = () => {
           direction='column'
           justify='center'
           align='center'
-        >
-      <Flex direction='column' align='center' w='full'>
-        <Heading fontSize='' color='whiteAlpha.900'>My Work.</Heading>
-        <Text fontSize='32px' 
-              noOfLines={3} 
-              w='60%' 
-              textAlign='center' 
-              pt='32px' 
-              pb='8px' 
+          >
+      <Flex direction='column' 
+            align='center' 
+            w='full'
+            >
+        <Heading fontSize={responsiveHeaderFontSize} 
+                 color='whiteAlpha.900'
+                 >
+          My Work.
+        </Heading>
+        <Text fontSize={responsiveSubheaderFontSize}
+              noOfLines={3}
+              w='60%'
+              textAlign='center'
+              pt='32px'
+              pb='8px'
               color='whiteAlpha.800'
-              fontWeight='semibold'>
+              fontWeight='semibold'
+              >
           Stay. Inspired. Together.
         </Text>
         <br />
-        <Text fontSize='28px' color='whiteAlpha.700' fontWeight='thin' w='60%' textAlign='center'>
+        <Text fontSize={responsiveBodyTextFontSize}
+              color='whiteAlpha.700' 
+              fontWeight='thin' 
+              w={responsiveBodyTextBoxWidth}
+              textAlign='center'
+              >
           Music is collaborative. Like what you hear? Let's connect.
         </Text>
       </Flex>
-      <SongCarousel />
+      {/* <SongCarousel /> */}
     </Flex>
   );
 }
