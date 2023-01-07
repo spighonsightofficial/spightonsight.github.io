@@ -1,4 +1,4 @@
-const responsiveSubheaderFontSize = ['16px', '20px', null, '32px', null];
+const responsiveSubheaderFontSize = ['32px', '20px', null, '32px', null];
 
 export {
   responsiveSubheaderFontSize,

@@ -1,5 +1,5 @@
 import { ChakraProvider } from '@chakra-ui/react';
-import { theme } from '../utils/chakra-theme/theme.main.config';
+import theme from '../utils/chakra-theme/theme';
 import React from 'react';
 import SEO from '../components/misc/SEO';
 import { HomepageLayout } from '../layouts/homepage.layout/HomepageLayout';

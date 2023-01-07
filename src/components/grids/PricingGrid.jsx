@@ -1,7 +1,7 @@
 import React from 'react';
+// import PriceCardBadge from '../cards/price-card/PriceCardBadge';
 import { priceDetails } from '../../data/details/price-details.data';
 import PriceCard from '../cards/price-card/PriceCard';
-// import PriceCardBadge from '../cards/price-card/PriceCardBadge';
 import PriceCardBody from '../cards/price-card/PriceCardBody';
 import {
   Grid,
