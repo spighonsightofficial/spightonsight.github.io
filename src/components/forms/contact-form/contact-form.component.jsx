@@ -68,7 +68,6 @@ const ContactForm = () => {
                 id='email'
                 name='email'
                 type='email'
-                variant='filled'
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.email}
@@ -86,7 +85,6 @@ const ContactForm = () => {
                 id='firstName'
                 name='firstName'
                 type='firstName'
-                variant='filled'
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.firstName}
@@ -105,7 +103,6 @@ const ContactForm = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.lastName}
-                variant='filled'
                 placeholder='Smalls'
                 size='lg'
               />
@@ -119,7 +116,6 @@ const ContactForm = () => {
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
                         value={formik.values.message}
-                        variant='filled'
                         placeholder='Your message goes here...'
                         size='lg'
                         />
