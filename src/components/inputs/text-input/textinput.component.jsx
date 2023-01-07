@@ -26,7 +26,7 @@ const TextInput = (
 ) => {
   return (
     <FormControl 
-          isInvalid={formik.errors.firstName && formik.touched.firstName} 
+          isInvalid={renderCorrectInvalidCheck(name, formik)} 
           isRequired={required}
           isDisabled={disabled}
           >
@@ -73,4 +73,5 @@ function renderCorrectInvalidCheck(name, formik) {
     formik.errors.firstName && formik.touched.firstName :
     formik.errors.lastName && formik.touched.lastName
 }
-export default TextInput
+
+export default TextInput;
