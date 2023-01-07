@@ -4,32 +4,30 @@ import {
   responsiveEmailInputLabelFontSize,
 } from './email-input.responsive_values';
 
-import { MdMail } from 'react-icons/md';
 import {
   FormControl,
   FormLabel,
+  FormErrorMessage,
   InputGroup,
   InputLeftElement,
-  Input
+  Input,
 } from '@chakra-ui/react';
 
-const EmailInput = ({ size='sm', required=true, disabled=false }) => {
+const EmailInput = ({ formik, size='lg', }) => {
   return (
-    <FormControl isRequired={required} 
-                 isDisabled={disabled}
-                 >
-      <FormLabel fontSize={responsiveEmailInputLabelFontSize}
-                 >
-        Email address
-      </FormLabel>
-      <InputGroup>
-        <InputLeftElement pointerEvents='none' children={<MdMail />}/>
-        <Input  type='email' 
-                variant='filled' 
-                placeholder='nextup@future.com'
-                size={size}
-                />
-      </InputGroup>
+    <FormControl isInvalid={formik.errors.email && formik.touched.email} isRequired>
+      <FormLabel htmlFor='email'>Email Address</FormLabel>
+      <Input
+        id='email'
+        name='email'
+        type='email'
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
+        value={formik.values.email}
+        placeholder='upnext@future.com'
+        size={size}
+      />
+      <FormErrorMessage>{formik.errors.email}</FormErrorMessage>
     </FormControl>
   );
 }

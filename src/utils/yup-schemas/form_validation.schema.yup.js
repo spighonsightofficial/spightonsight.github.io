@@ -15,6 +15,6 @@ export const formValidationSchema = Yup.object({
 
   message: Yup.string()
               .min(5, 'Message cannot be shorter than 5 characters')
-              .max(20, 'Message cannot be longer than 20 characters')
+              .max(250, 'Message cannot be longer than 300 characters')
               .ensure(),
 });
