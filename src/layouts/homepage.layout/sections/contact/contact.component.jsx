@@ -2,7 +2,6 @@ import React from 'react';
 
 import {
   responsiveHeaderFontSize,
-  responsiveBodyTextFontSize,
   responsiveHorizontalPadding,
   responsiveVerticalPadding,
 } from '../../../../utils/global_responsive_values.utility';
@@ -46,8 +45,7 @@ const Contact = () => {
                  >
           Let's Connect.
         </Heading>
-        <Text fontSize={responsiveBodyTextFontSize}
-              color='whiteAlpha.700' 
+        <Text color='whiteAlpha.700' 
               noOfLines={8} 
               w={responsiveBodyTextBoxWidth} 
               textAlign={responsiveTextAlign}

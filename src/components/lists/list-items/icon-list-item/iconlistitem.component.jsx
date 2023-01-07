@@ -26,7 +26,6 @@ const IconListItem = ({ icon, details={} }) => {
     <Flex direction='column'
           align='center'
           w='full'
-          border='1px' borderColor='white'
           >
       <Heading as='h3'
                fontSize={responsiveListHeaderFontSize}

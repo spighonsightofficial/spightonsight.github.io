@@ -1,10 +1,6 @@
 import React from 'react';
 
 import {
-  responsiveEmailInputLabelFontSize,
-} from './email-input.responsive_values';
-
-import {
   FormControl,
   FormLabel,
   FormErrorMessage,
@@ -13,10 +9,12 @@ import {
   Input,
 } from '@chakra-ui/react';
 
-const EmailInput = ({ formik, size='lg', }) => {
+const EmailInput = ({ formik, size='lg', required=true}) => {
   return (
-    <FormControl isInvalid={formik.errors.email && formik.touched.email} isRequired>
-      <FormLabel htmlFor='email'>Email Address</FormLabel>
+    <FormControl isInvalid={formik.errors.email && formik.touched.email} isRequired={required}>
+      <FormLabel htmlFor='email'>
+        Email Address
+      </FormLabel>
       <Input
         id='email'
         name='email'

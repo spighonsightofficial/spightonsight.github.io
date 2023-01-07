@@ -2,7 +2,7 @@ import React from 'react';
 
 import {
   responsiveHeaderFontSize,
-  responsiveBodyTextFontSize,
+  // responsiveBodyTextFontSize,
   responsiveHorizontalPadding,
   responsiveVerticalPadding,
 } from '../../../../utils/global_responsive_values.utility';
@@ -48,7 +48,7 @@ const FAQ = () => {
         </Heading>
         <Text noOfLines={10} 
               w={responsiveBodyTextBoxWidth}
-              fontSize={responsiveBodyTextFontSize}
+              // // fontSize={responsiveBodyTextFontSize}
               py='16px' 
               color='whiteAlpha.700' 
               textAlign={responsiveTextAlign}

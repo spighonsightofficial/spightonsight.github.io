@@ -4,12 +4,11 @@ import { EffectCoverflow, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import DemoOne from '../../assets/demos/demo-1/demo-1.wav';
-import DemoTwo from '../../assets/demos/demo-2/demo-2.wav';
-import DrillDemo from '../../assets/demos/demo-3-drill/drill.wav';
-import SetMeFreeDemo from '../../assets/demos/demo-4-set-me-free/demo-set-me-free.wav';
-import { demoItems } from '../../data/items/demo-items.data';
-import SongCard from '../../components/cards/SongCard';
+import DemoOne from '../../../assets/demos/demo-1/demo-1.wav';
+import DemoTwo from '../../../assets/demos/demo-2/demo-2.wav';
+import DrillDemo from '../../../assets/demos/demo-3-drill/drill.wav';
+import SetMeFreeDemo from '../../../assets/demos/demo-4-set-me-free/demo-set-me-free.wav';
+import SongCard from '../../cards/SongCard';
 import {
   HStack,
   Flex,
@@ -37,10 +36,8 @@ export default function App() {
       >
         <SwiperSlide>
           <Flex justify='center' align='center'>
-            <HStack spacing={16}>
-              <SongCard src={DemoOne} title={'Demo One'}/>
-              <SongCard src={SetMeFreeDemo} title={'Set Me Free'}/>
-            </HStack>
+            <SongCard src={DemoOne} title={'Demo One'}/>
+            <SongCard src={SetMeFreeDemo} title={'Set Me Free'}/>
           </Flex>
         </SwiperSlide>
         <SwiperSlide>

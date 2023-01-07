@@ -59,7 +59,7 @@ const ContactForm = () => {
                        name='lastName'
                        placeholder='Smalls'
                        />
-            <MessageArea formik={formik} />
+            <MessageArea formik={formik} required={false} />
             <Button type='submit' 
                     colorScheme='purple' 
                     width='full'

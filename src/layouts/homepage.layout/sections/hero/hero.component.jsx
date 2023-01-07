@@ -7,7 +7,6 @@ import {
 
 import {
   responsiveFontSize,
-  responsiveNumberOfLines,
   responsiveWidth,
   responsiveFlexColumnAlign,
   responsiveFlexColumnJustify,
@@ -20,7 +19,6 @@ import {
   Box,
   Flex,
   Heading,
-  Text,
 } from '@chakra-ui/react';
 
 // TODO: Add Highlights to hero text
@@ -39,12 +37,9 @@ const Hero = () => {
         <Box w='80%'>
           <Heading as='h1' 
                    fontSize={responsiveFontSize}
+                   color='whiteAlpha.900'
                    >
-            <Text noOfLines={responsiveNumberOfLines} 
-                  color='whiteAlpha.900'
-                  >
               I'm Jim. A music producer, passionate about helping aspiring artists discover their sound.
-            </Text>
           </Heading>
         </Box>
         <Flex mt='64px' 

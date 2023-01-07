@@ -1,6 +1,4 @@
 // Sizing & Typography
-
-
 // Width & Height
 const responsiveBodyTextBoxWidth = ['80%', null, null, null, null];
 

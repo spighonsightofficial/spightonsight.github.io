@@ -1,10 +1,6 @@
 import React from 'react';
 
 import {
-  responsiveMessageAreaLabelFontSize,
-} from './messagearea.responsive_styles';
-
-import {
   FormControl,
   FormLabel,
   FormErrorMessage,

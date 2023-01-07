@@ -1,4 +1,8 @@
 import React from 'react';
+import {
+  responsiveSubheaderFontSize,
+} from './pricing.responsive_values';
+
 import PricingGrid from '../../../../components/grids/PricingGrid';
 import {
   Flex,
@@ -14,14 +18,13 @@ const Pricing = () => {
           py='128px' 
           align='center'
           >
-      <Heading as='h2' 
-               fontSize='48px'
+      <Heading as='h2'
                >
         Never Overpay Again.
       </Heading>
       <Text color='blackAlpha.700' 
-            fontSize='24px' 
             py='16px'
+            fontSize={responsiveSubheaderFontSize}
             >
         Below are the base prices for hourly work. 
         Contact me for package pricing.
