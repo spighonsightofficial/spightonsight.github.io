@@ -1,6 +1,6 @@
 import React from 'react';
 import { useFormik } from 'formik';
-import * as Yup from 'yup';
+import { formValidationSchema } from '../../../utils/yup-schemas/form_validation.schema.yup';
 
 // import {
 //   responsiveFromInputHorizontalPadding,
@@ -36,24 +36,7 @@ const ContactForm = () => {
       resetForm();
       alert('Your email has been submitted. We will respond ASAP.');
     },
-    validationSchema: Yup.object({
-      firstName: Yup.string()
-                    .min(1, 'Name cannot be shorter than 1 character')
-                    .max(5, 'Name cannot be longer than 40 characters')
-                    .ensure(),
-                   
-      lastName:  Yup.string()
-                    .min(1, 'Name cannot be shorter than 1 character')
-                    .max(5, 'Name cannot be longer than 5 characters')
-                    .ensure(),
-
-      email: Yup.string().email().ensure(),
-
-      message: Yup.string()
-                  .min(5, 'Message cannot be shorter than 5 characters')
-                  .max(20, 'Message cannot be longer than 20 characters')
-                  .ensure(),
-    }),
+    validationSchema: formValidationSchema,
   });
   
   return (
