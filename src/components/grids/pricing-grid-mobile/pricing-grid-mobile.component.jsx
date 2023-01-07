@@ -12,6 +12,7 @@ const PricingGridMobile = () => {
   return (
     <VStack width='full'
             px='32px'
+            pt='64px'
             gap='32px'
             >
       <PriceCard width='full'>
