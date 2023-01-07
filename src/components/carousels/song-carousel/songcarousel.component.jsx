@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
+// import 'swiper/css/pagination';
 import DemoOne from '../../../assets/demos/demo-1/demo-1.wav';
 import DemoTwo from '../../../assets/demos/demo-2/demo-2.wav';
 import DrillDemo from '../../../assets/demos/demo-3-drill/drill.wav';
