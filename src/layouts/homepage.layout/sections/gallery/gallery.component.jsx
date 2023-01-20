@@ -3,7 +3,6 @@ import React from 'react';
 import { 
   responsiveHeaderFontSize,
   responsiveSubheaderFontSize,
-  responsiveBodyTextFontSize,
   responsiveHorizontalPadding,
   responsiveVerticalPadding,
 } from '../../../../utils/global_responsive_values.utility';
@@ -12,15 +11,22 @@ import {
   responsiveBodyTextBoxWidth,
 } from './gallery.responsive_values';
 
-import SongCarousel from '../../../../components/carousels/songcarousel.component';
-
+import { FaArrowRight } from 'react-icons/fa';
+import SongCarousel from '../../../../components/carousels/song-carousel/songcarousel.component';
+import SongCarouselMobile from '../../../../components/carousels/song-carousel-mobile/song-carousel-mobile.component';
 import {
   Flex,
+  HStack,
   Heading,
   Text,
+  useMediaQuery,
+  Box,
 } from '@chakra-ui/react';
 
 const Gallery = () => {
+
+  const [isUnder500px] = useMediaQuery('(max-width: 500px)');
+
   return (
     <Flex id='gallery' 
           as='section' 
@@ -52,8 +58,7 @@ const Gallery = () => {
           Stay. Inspired. Together.
         </Text>
         <br />
-        <Text fontSize={responsiveBodyTextFontSize}
-              color='whiteAlpha.700' 
+        <Text color='whiteAlpha.700' 
               fontWeight='thin' 
               w={responsiveBodyTextBoxWidth}
               textAlign='center'
@@ -61,7 +66,17 @@ const Gallery = () => {
           Music is collaborative. Like what you hear? Let's connect.
         </Text>
       </Flex>
-      <SongCarousel />
+      {
+        isUnder500px ? <SongCarouselMobile/> : <SongCarousel />
+      }
+      {
+        isUnder500px && (<HStack>
+          <Text fontSize='20px' fontWeight='thin' color='whiteAlpha.900'>Swipe To View</Text>
+          <Box color='whiteAlpha.900' fontSize='24px'>
+           <FaArrowRight />
+          </Box>
+        </HStack>)
+      }
     </Flex>
   );
 }
