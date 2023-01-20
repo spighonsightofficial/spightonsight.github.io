@@ -12,7 +12,7 @@ import {
 } from './gallery.responsive_values';
 
 import { FaArrowRight } from 'react-icons/fa';
-import SongCarousel from '../../../../components/carousels/song-carousel/songcarousel.component';
+import SongGrid from '../../../../components/grids/song-grid/song-grid.component';
 import SongCarouselMobile from '../../../../components/carousels/song-carousel-mobile/song-carousel-mobile.component';
 import {
   Flex,
@@ -67,7 +67,7 @@ const Gallery = () => {
         </Text>
       </Flex>
       {
-        isUnder500px ? <SongCarouselMobile/> : <SongCarousel />
+        isUnder500px ? <SongCarouselMobile/> : <SongGrid />
       }
       {
         isUnder500px && (<HStack>
