@@ -14,12 +14,13 @@ import {
   Flex,
   // useColorModeValue,
   Textarea,
-  VStack,
   FormControl,
   FormLabel,
   Input,
   Button,
   FormErrorMessage,
+  HStack,
+  VStack,
 } from '@chakra-ui/react';
 
 
@@ -44,36 +45,51 @@ const ContactForm = () => {
   });
   
   return (
-    <Flex bg="gray.100" align="center" justify="center" h="100vh">
-      <Box bg="white" p={6} rounded="md">
-        <form onSubmit={formik.handleSubmit}>
-          <VStack spacing={4} align="flex-start">
-            <EmailInput formik={formik}/>
-            <TextInput formik={formik}
-                       id='firstName'
-                       name='firstName'
-                       placeholder='Biggie'
-                       />
-            <TextInput formik={formik}
-                       id='lastName'
-                       name='lastName'
-                       placeholder='Smalls'
-                       />
-            <MessageArea formik={formik} required={false} />
+    <Flex justify='center'
+          align='center'
+          >
+      <Box bg="white"
+           rounded="md">
+        <form onSubmit={formik.handleSubmit} w='full'>
+          <Flex justify='start'
+                align='start'
+                p='32px'
+                >
+            <VStack>
+            <HStack>
+              <VStack>
+                <EmailInput formik={formik}/>
+                <TextInput formik={formik}
+                          id='firstName'
+                          name='firstName'
+                          placeholder='Biggie'
+                          />
+                <TextInput formik={formik}
+                          id='lastName'
+                          name='lastName'
+                          placeholder='Smalls'
+                          />
+
+              <MessageArea formik={formik} required={false}/>
+              </VStack>
+           </HStack>
             <Button type='submit' 
-                    colorScheme='purple' 
-                    width='full'
-                    >
-              Send
-            </Button>
-            <Button type='reset'
-                    colorScheme='purple'
-                    width='full'
-                    variant='outline'
-                    >
-              Clear
-            </Button>
-          </VStack>
+                      colorScheme='purple' 
+                      width='full'
+                      mt='24px'
+                      mb='12px'
+                      >
+                Send
+              </Button>
+              <Button type='reset'
+                      colorScheme='purple'
+                      width='full'
+                      variant='outline'
+                      >
+                Clear
+              </Button>
+            </VStack>
+          </Flex>
         </form>
       </Box>
     </Flex>
